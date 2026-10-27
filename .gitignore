@@ -1,0 +1,56 @@
+﻿# Environment variables and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python virtual environments
+venv/
+.venv/
+testenv/
+**/venv/
+**/.venv/
+**/testenv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Generated build files
+frontend/dist/
+frontend/build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local databases
+*.sqlite3
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Frontend generated files
+**/dist/
+**/build/
+**/node_modules/
+
+# Native host build artifacts
+/build/
+/dist/
+
+# Python cache
+**/__pycache__/
+
+# Local native host configuration
+desktop_helper/com.lifecue.focus_guard.json

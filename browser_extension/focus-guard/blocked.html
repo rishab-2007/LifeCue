@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LifeCue · Focus</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            background: #0b1020;
+            color: #f8fafc;
+            font-family: system-ui, sans-serif;
+            font-size: 16px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .icon {
+            font-size: 35px;
+            color: #c4b5fd;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin: 12px 0;
+        }
+
+        p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        strong {
+            display: block;
+            font-size: 30px;
+            background: #18213a;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: 0;
+            border-radius: 8px;
+            background: #8b5cf6;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #7c3aed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="icon">✦</div>
+
+        <p>LIFECUE FOCUS GUARD</p>
+
+        <h1>Stay with your goal.</h1>
+
+        <p id="msg">
+            This site is blocked during your focus session.
+        </p>
+
+        <strong id="timer">Checking…</strong>
+
+        <p>
+            Blocking ends when the timer finishes or you end
+            the session from the extension menu.
+        </p>
+
+        <button id="refresh" type="button">
+            Check again
+        </button>
+
+    </main>
+
+    <script src="blocked.js"></script>
+
+</body>
+
+</html>

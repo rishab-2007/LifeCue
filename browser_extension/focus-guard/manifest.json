@@ -1,0 +1,41 @@
+
+{
+  "manifest_version": 3,
+  "name": "LifeCue Focus Guard",
+  "version": "0.1.1",
+  "description": "Timed website blocking for focus sessions",
+  "permissions": [
+    "storage",
+    "tabs",
+    "alarms",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:5173/*",
+        "http://127.0.0.1:5173/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "LifeCue Focus Guard"
+  },
+  "externally_connectable": {
+    "matches": [
+      "http://localhost:5173/*",
+      "http://127.0.0.1:5173/*"
+    ]
+  }
+}

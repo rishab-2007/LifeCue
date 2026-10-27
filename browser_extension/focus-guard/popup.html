@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeCue Focus Guard</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <main class="app">
+        <header class="header">
+            <div class="brand-icon">L</div>
+            <div class="brand-text">
+                <h1>LifeCue</h1>
+                <p>FOCUS GUARD</p>
+            </div>
+            <span class="shield" aria-label="Focus protection">✦</span>
+        </header>
+
+```
+    <section class="hero">
+        <p class="eyebrow">YOUR FOCUS SPACE</p>
+        <h2>Protect your focus.</h2>
+        <p class="subtitle">Less distraction. More progress.</p>
+
+        <div class="session-card">
+            <div class="status-row">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="status" role="status">Checking session...</span>
+            </div>
+
+            <div class="timer" id="remaining">--:--</div>
+            <p class="timer-caption" id="timerCaption">
+                Choose a duration to get started
+            </p>
+        </div>
+    </section>
+
+    <section class="settings">
+        <div class="section-heading">
+            <h3>Focus duration</h3>
+            <span class="section-note">STAY ON TRACK</span>
+        </div>
+
+        <label class="field-label" for="duration">Session length</label>
+        <select id="duration">
+            <option value="1">1 minute · Test</option>
+            <option value="15">15 minutes</option>
+            <option value="25" selected>25 minutes · Pomodoro</option>
+            <option value="45">45 minutes</option>
+            <option value="60">60 minutes</option>
+            <option value="90">90 minutes</option>
+            <option value="120">120 minutes</option>
+        </select>
+
+        <div class="section-heading sites-heading">
+            <h3>Blocked websites</h3>
+            <span class="count" id="selectedCount">5 selected</span>
+        </div>
+
+        <div class="sites-list">
+            <label class="site-option">
+                <span class="site-icon instagram">◎</span>
+                <span class="site-name">Instagram</span>
+                <input type="checkbox" value="instagram.com" checked>
+            </label>
+
+            <label class="site-option">
+                <span class="site-icon facebook">f</span>
+                <span class="site-name">Facebook</span>
+                <input type="checkbox" value="facebook.com" checked>
+            </label>
+
+            <label class="site-option">
+                <span class="site-icon reddit">r</span>
+                <span class="site-name">Reddit</span>
+                <input type="checkbox" value="reddit.com" checked>
+            </label>
+
+            <label class="site-option">
+                <span class="site-icon x-icon">𝕏</span>
+                <span class="site-name">X</span>
+                <input type="checkbox" value="x.com" checked>
+            </label>
+
+            <label class="site-option">
+                <span class="site-icon tiktok">♪</span>
+                <span class="site-name">TikTok</span>
+                <input type="checkbox" value="tiktok.com" checked>
+            </label>
+        </div>
+        <div class="custom-site">
+    <label class="field-label" for="customDomain">
+        Add your own website
+    </label>
+
+```
+<div class="custom-site-row">
+    <input
+        id="customDomain"
+        type="text"
+        placeholder="example.com"
+        autocomplete="off"
+    >
+
+    <button id="addDomain" type="button">Add</button>
+</div>
+
+<p class="custom-site-hint">
+    Enter a domain like pinterest.com
+</p>
+
+<div id="customSites" class="custom-sites-list"></div>
+```
+
+</div>
+
+
+        <div class="allowed-note">
+            <span class="allowed-check">✓</span>
+            <p>YouTube and Apna College stay available.</p>
+        </div>
+    </section>
+
+    <section class="actions">
+        <button id="start" class="start-button">
+            <span>▶</span> Start focus session
+        </button>
+
+        <button id="stop" class="stop-button" disabled>
+            End session early
+        </button>
+
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <footer class="footer">
+        <span>Made for better focus</span>
+        <span>LifeCue · v0.1.1</span>
+    </footer>
+</main>
+
+<script src="popup.js"></script>
+```
+
+</body>
+</html>
